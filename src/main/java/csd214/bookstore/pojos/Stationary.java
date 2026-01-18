@@ -20,7 +20,7 @@ public abstract class Stationary extends Product{
     }
 
     @Override
-    // I resolved the SaleableItem 'contract' here, like how I saw you do with Publication. I figured if Stationary and Publication are on the same 'level', it would be better here rather than Pen/Notebook. Let me know if this is logical
+    // I resolved the SaleableItem 'contract' here, like how I saw you do with Publication. I figured if Stationary and Publication are on the same 'level', it would be better here rather than Pen/Notebook. Let me know if this is logical / makes sense.
     public double getPrice() {
         return price;
     }

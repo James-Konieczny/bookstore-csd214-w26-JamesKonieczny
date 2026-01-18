@@ -1,0 +1,26 @@
+package csd214.bookstore.pojos;
+
+public class Notebook extends Stationary {
+    private int pageCount;
+
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    public void setPageCount(int pageCount) {
+        this.pageCount = pageCount;
+    }
+
+    @Override
+    public void initialize() {
+        super.initialize();
+
+        System.out.println("Enter Page Count:");
+        this.pageCount = getInput(0);
+    }
+
+    @Override
+    public void sellItem() {
+        System.out.println("Selling " + getBrand() + " Notebook with " + pageCount + " pages..." );
+    }
+}

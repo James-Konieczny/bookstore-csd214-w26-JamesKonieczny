@@ -1,7 +1,5 @@
 package csd214.bookstore.pojos;
 
-import java.sql.SQLOutput;
-
 public class Pen extends Stationary {
     private String color;
 
@@ -23,6 +21,6 @@ public class Pen extends Stationary {
 
     @Override
     public void sellItem() {
-        System.out.println("Selling " + color + "Pen...");
+        System.out.println("Selling " + color + " Pen...");
     }
 }
