@@ -23,4 +23,11 @@ public class Notebook extends Stationary {
     public void sellItem() {
         System.out.println("Selling " + getBrand() + " Notebook with " + pageCount + " pages..." );
     }
+
+    @Override
+    public void edit() {
+        super.edit();
+        System.out.println("Edit Page Count [" + this.pageCount + "]:");
+        this.pageCount = getInput(this.pageCount);
+    }
 }

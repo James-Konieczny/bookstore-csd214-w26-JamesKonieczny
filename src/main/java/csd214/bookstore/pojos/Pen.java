@@ -23,4 +23,11 @@ public class Pen extends Stationary {
     public void sellItem() {
         System.out.println("Selling " + color + " Pen...");
     }
+
+    @Override
+    public void edit() {
+        super.edit();
+        System.out.println("Edit Color [" + this.color + "]:");
+        this.color = getInput(this.color);
+    }
 }
