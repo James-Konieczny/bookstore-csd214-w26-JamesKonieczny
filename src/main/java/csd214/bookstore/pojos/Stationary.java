@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public abstract class Stationary extends Product{
     private String brand;
+    private double price = 0.0;
 
   // shortcut: alt + insert
     public String getBrand() {
@@ -16,6 +17,16 @@ public abstract class Stationary extends Product{
 
     public Stationary() {
 
+    }
+
+    @Override
+    // I resolved the SaleableItem 'contract' here, like how I saw you do with Publication. I figured if Stationary and Publication are on the same 'level', it would be better here rather than Pen/Notebook. Let me know if this is logical
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override
