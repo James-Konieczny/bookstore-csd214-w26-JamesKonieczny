@@ -11,17 +11,27 @@ public class Notebook extends Stationary {
         this.pageCount = pageCount;
     }
 
+    public Notebook(){}
+
+    public Notebook(int pageCount, String brand, double price, int copies){
+        super(brand, price, copies);
+        this.pageCount = pageCount;
+    }
+
     @Override
     public void initialize() {
         super.initialize();
 
         System.out.println("Enter Page Count:");
         this.pageCount = getInput(0);
+
+        super.initPriceCopies();
     }
 
     @Override
     public void sellItem() {
         System.out.println("Selling " + getBrand() + " Notebook with " + pageCount + " pages..." );
+        setCopies(getCopies() - 1);
     }
 
     @Override

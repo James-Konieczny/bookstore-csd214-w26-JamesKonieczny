@@ -11,17 +11,27 @@ public class BowlingBall extends BowlingSupply {
         this.weight = weight;
     }
 
+    public BowlingBall(){}
+
+    public BowlingBall(int weight, String color, double price, int copies){
+        super(color, price, copies);
+        this.weight = weight;
+    }
+
     @Override
     public void initialize() {
         super.initialize();
 
         System.out.println("Enter Ball Weight (lbs):");
         this.weight = getInput(12);
+
+        super.initPriceCopies();
     }
 
     @Override
     public void sellItem() {
         System.out.println("Selling " + weight + "lb Bowling Ball (Color " + getColor() + ")...");
+        setCopies(getCopies() - 1);
     }
 
     @Override

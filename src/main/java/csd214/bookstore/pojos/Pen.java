@@ -13,8 +13,8 @@ public class Pen extends Stationary {
 
     public Pen(){}
 
-    public Pen(String color, String brand, double price){
-        super(brand, price);
+    public Pen(String color, String brand, double price, int copies){
+        super(brand, price, copies);
         this.color = color;
     }
 
@@ -24,11 +24,14 @@ public class Pen extends Stationary {
 
         System.out.println("Enter Pen Color:");
         this.color = getInput("Blue");
+
+        super.initPriceCopies();
     }
 
     @Override
     public void sellItem() {
         System.out.println("Selling " + color + " Pen...");
+        setCopies(getCopies() - 1);
     }
 
     @Override
