@@ -33,4 +33,9 @@ public class BowlingShoes extends BowlingSupply {
         System.out.println("Edit Shoe Size [" + this.shoeSize + "]:");
         this.shoeSize = getInput(this.shoeSize);
     }
+
+    @Override
+    public String toString() {
+        return "Bowling Shoes{Shoe Size='" + shoeSize + "', " + super.toString() + "}";
+    }
 }

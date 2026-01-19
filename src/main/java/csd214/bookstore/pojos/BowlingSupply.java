@@ -38,4 +38,11 @@ public abstract class BowlingSupply extends Product {
         System.out.println("Edit Color [" + this.color + "]:");
         this.color = getInput(this.color);
     }
+
+    @Override
+    public String toString() {
+        return "BowlingSupply{" +
+                "color='" + color + '\'' +
+                '}';
+    }
 }

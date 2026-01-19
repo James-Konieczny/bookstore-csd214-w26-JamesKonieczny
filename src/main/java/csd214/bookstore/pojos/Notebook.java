@@ -30,4 +30,9 @@ public class Notebook extends Stationary {
         System.out.println("Edit Page Count [" + this.pageCount + "]:");
         this.pageCount = getInput(this.pageCount);
     }
+
+    @Override
+    public String toString() {
+        return "Notebook{Page Count='" + pageCount + "', " + super.toString() + "}";
+    }
 }

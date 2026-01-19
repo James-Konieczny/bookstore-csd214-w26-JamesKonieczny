@@ -6,7 +6,12 @@ public abstract class Stationary extends Product{
     private String brand;
     private double price = 0.0;
 
-  // shortcut: alt + insert
+    public Stationary(String brand, double price) {
+        this.brand = brand;
+        this.price = price;
+    }
+
+    // shortcut: alt + insert
     public String getBrand() {
         return brand;
     }

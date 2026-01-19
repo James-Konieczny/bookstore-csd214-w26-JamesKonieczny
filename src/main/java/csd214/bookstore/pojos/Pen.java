@@ -11,6 +11,13 @@ public class Pen extends Stationary {
         this.color = color;
     }
 
+    public Pen(){}
+
+    public Pen(String color, String brand, double price){
+        super(brand, price);
+        this.color = color;
+    }
+
     @Override
     public void initialize() {
         super.initialize();
@@ -29,5 +36,10 @@ public class Pen extends Stationary {
         super.edit();
         System.out.println("Edit Color [" + this.color + "]:");
         this.color = getInput(this.color);
+    }
+
+    @Override
+    public String toString() {
+        return "Pen{color='" + color + "', " + super.toString() + "}";
     }
 }

@@ -16,7 +16,7 @@ public class App {
         populate();
         int choice = 0;
         while (choice != 99) {
-            System.out.println("\n*The Everything Store**");
+            System.out.println("\n*The Everything Store*");
             System.out.println(" 1. Add Items");
             System.out.println(" 2. Edit Items");
             System.out.println(" 3. Delete Items");
@@ -119,8 +119,10 @@ public class App {
             System.out.println("3. Magazines");
             System.out.println("4. DiscMags");
             System.out.println("5. Tickets");
-            System.out.println("6. Stationary");
-            System.out.println("7. Bowling Supply");
+            System.out.println("6. Pen");
+            System.out.println("7. Notebook");
+            System.out.println("8. Bowling Ball");
+            System.out.println("9. Bowling Shoes");
             System.out.println("99. Exit");
 
             try {
@@ -140,8 +142,10 @@ public class App {
                 case 3: filter = Magazine.class; break;
                 case 4: filter = DiscMag.class; break;
                 case 5: filter = Ticket.class; break;
-                case 6: filter = Stationary.class; break;
-                case 7: filter = BowlingSupply.class; break;
+                case 6: filter = Pen.class; break;
+                case 7: filter = Notebook.class; break;
+                case 8: filter = BowlingBall.class; break;
+                case 9: filter = BowlingShoes.class; break;
                 default: System.out.println("Invalid selection."); continue;
             }
 

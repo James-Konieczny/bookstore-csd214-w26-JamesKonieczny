@@ -31,4 +31,9 @@ public class BowlingBall extends BowlingSupply {
         System.out.println("Edit Weight [" + this.weight + "]:");
         this.weight = getInput(this.weight);
     }
+
+    @Override
+    public String toString() {
+        return "Bowling Ball{weight='" + weight + "', " + super.toString() + "}";
+    }
 }
