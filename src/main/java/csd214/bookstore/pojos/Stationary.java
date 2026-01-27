@@ -62,7 +62,6 @@ public abstract class Stationary extends Product{
     }
 
     @Override
-
     public void initialize() {
 //        super.initialize(); // Critical: let Parent ask for Name/Price
         System.out.println("Enter Brand:");
