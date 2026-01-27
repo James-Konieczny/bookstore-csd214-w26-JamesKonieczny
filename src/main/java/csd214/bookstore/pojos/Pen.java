@@ -47,5 +47,14 @@ public class Pen extends Stationary {
     public String toString() {
         return "Pen{color='" + color + "', " + super.toString() + "}";
     }
-}
 
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+}
