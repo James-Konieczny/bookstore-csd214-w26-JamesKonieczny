@@ -1,6 +1,7 @@
 package csd214.bookstore.pojos;
 
 import java.util.Objects;
+import java.util.Scanner;
 
 public abstract class Stationary extends Product{
     private String brand;
@@ -28,7 +29,6 @@ public abstract class Stationary extends Product{
     }
 
     @Override
-    // I resolved the SaleableItem 'contract' here, like how I saw you do with Publication. I figured if Stationary and Publication are on the same 'level', it would be better here rather than Pen/Notebook. Let me know if this is logical / makes sense.
     public double getPrice() {
         return price;
     }
@@ -62,33 +62,33 @@ public abstract class Stationary extends Product{
     }
 
     @Override
-    public void initialize() {
+    public void initialize(Scanner input) {
 //        super.initialize(); // Critical: let Parent ask for Name/Price
         System.out.println("Enter Brand:");
-        this.brand = getInput("Generic");
+        this.brand = getInput(input, "Generic");
     }
 
-    protected void initPriceCopies() {
+    protected void initPriceCopies(Scanner input) {
         System.out.println("Enter copies:");
-        this.copies = getInput(0);
+        this.copies = getInput(input, 0);
 
         System.out.println("Enter price:");
-        this.price = getInput(0.0);
+        this.price = getInput(input, 0.0);
     }
 
     @Override
-    public void edit() {
+    public void edit(Scanner input) {
         // 1. Edit Parent fields (Title, Price, Copies)
 //        super.edit();
 
         // 2. Edit Self fields
         System.out.println("Edit Author [" + this.brand + "]:");
-        this.brand = getInput(this.brand);
+        this.brand = getInput(input, this.brand);
 
         System.out.println("Edit Price [" + this.price + "]:");
-        this.price = getInput(this.price);
+        this.price = getInput(input, this.price);
 
         System.out.println("Edit Copies [" + this.copies + "]:");
-        this.copies = getInput(this.copies);
+        this.copies = getInput(input, this.copies);
     }
 }

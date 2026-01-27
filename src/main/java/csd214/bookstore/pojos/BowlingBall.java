@@ -1,5 +1,7 @@
 package csd214.bookstore.pojos;
 
+import java.util.Scanner;
+
 public class BowlingBall extends BowlingSupply {
     private int weight;
 
@@ -19,13 +21,13 @@ public class BowlingBall extends BowlingSupply {
     }
 
     @Override
-    public void initialize() {
-        super.initialize();
+    public void initialize(Scanner input) {
+        super.initialize(input);
 
         System.out.println("Enter Ball Weight (lbs):");
-        this.weight = getInput(12);
+        this.weight = getInput(input, 12);
 
-        super.initPriceCopies();
+        super.initPriceCopies(input);
     }
 
     @Override
@@ -35,11 +37,11 @@ public class BowlingBall extends BowlingSupply {
     }
 
     @Override
-    public void edit() {
-        super.edit();
+    public void edit(Scanner input) {
+        super.edit(input);
 
         System.out.println("Edit Weight [" + this.weight + "]:");
-        this.weight = getInput(this.weight);
+        this.weight = getInput(input, this.weight);
     }
 
     @Override

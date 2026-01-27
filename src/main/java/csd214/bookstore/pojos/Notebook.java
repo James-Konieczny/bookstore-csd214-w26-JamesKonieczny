@@ -1,5 +1,7 @@
 package csd214.bookstore.pojos;
 
+import java.util.Scanner;
+
 public class Notebook extends Stationary {
     private int pageCount;
 
@@ -19,13 +21,13 @@ public class Notebook extends Stationary {
     }
 
     @Override
-    public void initialize() {
-        super.initialize();
+    public void initialize(Scanner input) {
+        super.initialize(input);
 
         System.out.println("Enter Page Count:");
-        this.pageCount = getInput(0);
+        this.pageCount = getInput(input, 0);
 
-        super.initPriceCopies();
+        super.initPriceCopies(input);
     }
 
     @Override
@@ -35,10 +37,10 @@ public class Notebook extends Stationary {
     }
 
     @Override
-    public void edit() {
-        super.edit();
+    public void edit(Scanner input) {
+        super.edit(input);
         System.out.println("Edit Page Count [" + this.pageCount + "]:");
-        this.pageCount = getInput(this.pageCount);
+        this.pageCount = getInput(input, this.pageCount);
     }
 
     @Override

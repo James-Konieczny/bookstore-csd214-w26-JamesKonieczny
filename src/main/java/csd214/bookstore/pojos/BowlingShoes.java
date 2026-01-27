@@ -1,5 +1,7 @@
 package csd214.bookstore.pojos;
 
+import java.util.Scanner;
+
 public class BowlingShoes extends BowlingSupply {
     private int shoeSize;
 
@@ -19,13 +21,13 @@ public class BowlingShoes extends BowlingSupply {
     }
 
     @Override
-    public void initialize() {
-        super.initialize();
+    public void initialize(Scanner input) {
+        super.initialize(input);
 
         System.out.println("Enter Shoe Size:");
-        this.shoeSize = Integer.parseInt(getInput("9"));
+        this.shoeSize = Integer.parseInt(getInput(input, "9"));
 
-        super.initPriceCopies();
+        super.initPriceCopies(input);
     }
 
     @Override
@@ -35,11 +37,11 @@ public class BowlingShoes extends BowlingSupply {
     }
 
     @Override
-    public void edit() {
-        super.edit();
+    public void edit(Scanner input) {
+        super.edit(input);
 
         System.out.println("Edit Shoe Size [" + this.shoeSize + "]:");
-        this.shoeSize = getInput(this.shoeSize);
+        this.shoeSize = getInput(input, this.shoeSize);
     }
 
     @Override

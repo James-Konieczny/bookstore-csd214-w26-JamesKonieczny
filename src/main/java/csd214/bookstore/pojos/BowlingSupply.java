@@ -1,5 +1,7 @@
 package csd214.bookstore.pojos;
 
+import java.util.Scanner;
+
 public abstract class BowlingSupply extends Product {
     private String color;
     private double price = 0.0;
@@ -38,33 +40,33 @@ public abstract class BowlingSupply extends Product {
     }
 
     @Override
-    public void initialize() {
+    public void initialize(Scanner input) {
         //       super.initialize();
 
         System.out.println("Enter Color: ");
-        this.color = getInput("Blue");
+        this.color = getInput(input, "Blue");
     }
 
-    protected void initPriceCopies() {
+    protected void initPriceCopies(Scanner input) {
         System.out.println("Enter copies:");
-        this.copies = getInput(0);
+        this.copies = getInput(input, 0);
 
         System.out.println("Enter price:");
-        this.price = getInput(0.0);
+        this.price = getInput(input, 0.0);
     }
 
     @Override
-    public void edit() {
+    public void edit(Scanner input) {
         //       super.edit();
 
         System.out.println("Edit Color [" + this.color + "]:");
-        this.color = getInput(this.color);
+        this.color = getInput(input, this.color);
 
         System.out.println("Edit Price [" + this.price + "]:");
-        this.price = getInput(this.price);
+        this.price = getInput(input, this.price);
 
         System.out.println("Edit Copies [" + this.copies + "]:");
-        this.copies = getInput(this.copies);
+        this.copies = getInput(input, this.copies);
     }
 
     @Override
