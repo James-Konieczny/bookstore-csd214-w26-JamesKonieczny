@@ -1,5 +1,6 @@
 package csd214.bookstore.pojos;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Notebook extends Stationary {
@@ -46,6 +47,20 @@ public class Notebook extends Stationary {
     @Override
     public String toString() {
         return "Notebook{Page Count='" + pageCount + "', " + super.toString() + "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Notebook)) return false;
+        if (!super.equals(o)) return false;
+        Notebook notebook = (Notebook) o;
+        return Objects.equals(pageCount, notebook.pageCount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), pageCount);
     }
 }
 

@@ -1,5 +1,6 @@
 package csd214.bookstore.pojos;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class BowlingShoes extends BowlingSupply {
@@ -47,6 +48,20 @@ public class BowlingShoes extends BowlingSupply {
     @Override
     public String toString() {
         return "Bowling Shoes{Shoe Size='" + shoeSize + "', " + super.toString() + "}";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BowlingShoes)) return false;
+        if (!super.equals(o)) return false;
+        BowlingShoes bowlingshoes = (BowlingShoes) o;
+        return Objects.equals(shoeSize, bowlingshoes.shoeSize);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), shoeSize);
     }
 }
 

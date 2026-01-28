@@ -1,5 +1,6 @@
 package csd214.bookstore.pojos;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public abstract class BowlingSupply extends Product {
@@ -76,5 +77,21 @@ public abstract class BowlingSupply extends Product {
                 ", price=" + price + ", copies=" + copies +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BowlingSupply)) return false;
+        BowlingSupply that = (BowlingSupply) o;
+        return Double.compare(that.price, price) == 0 &&
+                copies == that.copies &&
+                Objects.equals(color, that.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, price, copies);
+    }
+
 }
 

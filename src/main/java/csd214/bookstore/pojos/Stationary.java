@@ -52,13 +52,17 @@ public abstract class Stationary extends Product{
 
     @Override
     public boolean equals(Object o) {
-        if (!(o instanceof Stationary that)) return false;
-        return Objects.equals(brand, that.brand);
+        if (this == o) return true;
+        if (!(o instanceof Stationary)) return false;
+        Stationary that = (Stationary) o;
+        return Double.compare(that.price, price) == 0 &&
+                copies == that.copies &&
+                Objects.equals(brand, that.brand);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(brand);
+        return Objects.hash(brand, price, copies);
     }
 
     @Override

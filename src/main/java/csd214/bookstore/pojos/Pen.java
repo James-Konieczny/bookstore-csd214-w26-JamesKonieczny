@@ -1,5 +1,6 @@
 package csd214.bookstore.pojos;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Pen extends Stationary {
@@ -50,11 +51,15 @@ public class Pen extends Stationary {
 
     @Override
     public boolean equals(Object o) {
-        return super.equals(o);
+        if (this == o) return true;
+        if (!(o instanceof Pen)) return false;
+        if (!super.equals(o)) return false;
+        Pen pen = (Pen) o;
+        return Objects.equals(color, pen.color);
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(super.hashCode(), color);
     }
 }
