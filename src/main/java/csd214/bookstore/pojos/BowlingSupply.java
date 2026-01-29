@@ -84,13 +84,12 @@ public abstract class BowlingSupply extends Product {
         if (!(o instanceof BowlingSupply)) return false;
         BowlingSupply that = (BowlingSupply) o;
         return Double.compare(that.price, price) == 0 &&
-                copies == that.copies &&
                 Objects.equals(color, that.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(color, price, copies);
+        return Objects.hash(color, price);
     }
 
 }

@@ -68,6 +68,7 @@ public class App {
             System.out.println("2. Add Magazine");
             System.out.println("3. Add DiscMag");
             System.out.println("4. Add Ticket");
+            System.out.println("5. Add Pen");
             System.out.println("99. Exit");
 
             try {
@@ -86,6 +87,7 @@ public class App {
                 case 2: item = new Magazine(); break;
                 case 3: item = new DiscMag(); break;
                 case 4: item = new Ticket(); break;
+                case 5: item = new Pen(); break;
                 default: System.out.println("Invalid selection."); continue;
             }
 

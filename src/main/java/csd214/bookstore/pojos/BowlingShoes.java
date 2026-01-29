@@ -9,7 +9,6 @@ public class BowlingShoes extends BowlingSupply {
     public int getShoeSize() {
         return shoeSize;
     }
-
     public void setShoeSize(int shoeSize) {
         this.shoeSize = shoeSize;
     }

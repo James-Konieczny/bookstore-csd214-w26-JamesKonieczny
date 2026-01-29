@@ -56,13 +56,12 @@ public abstract class Stationary extends Product{
         if (!(o instanceof Stationary)) return false;
         Stationary that = (Stationary) o;
         return Double.compare(that.price, price) == 0 &&
-                copies == that.copies &&
                 Objects.equals(brand, that.brand);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(brand, price, copies);
+        return Objects.hash(brand, price);
     }
 
     @Override
