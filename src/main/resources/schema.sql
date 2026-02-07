@@ -6,9 +6,9 @@ CREATE TABLE Stationary (
 );
 
 
-CREATE TABLE bowling_balls (
+CREATE TABLE BowlingBalls (
     BallID INT PRIMARY KEY AUTO_INCREMENT,
-    WeightLbs DECIMAL(4,1) NOT NULL,
+    WeightLbs INT NOT NULL,
     Color VARCHAR(50),
     Price DECIMAL(8,2) NOT NULL,
     Copies INT NOT NULL
