@@ -8,6 +8,7 @@ public abstract class Stationery extends Product {
 
     public Stationery(String brand, double price) {
         this.brand = brand;
+        setPrice(price);
     }
 
     public Stationery() {
