@@ -100,7 +100,7 @@ public class Main {
 ```
 package csd214.bookstore;
 
-import csd214.bookstore.pojos.*;
+import csd214.old_.pojos.*;
 import com.github.javafaker.Faker;
 import java.util.ArrayList;
 import java.util.List;
@@ -375,7 +375,7 @@ public class App {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/SaleableItem.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 public interface SaleableItem {
     void sellItem();
@@ -387,7 +387,7 @@ public interface SaleableItem {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/Editable.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -518,7 +518,7 @@ public abstract class Editable implements Serializable, SaleableItem {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/Product.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import java.io.Serializable;
 
@@ -541,7 +541,7 @@ public abstract class Product extends Editable implements SaleableItem, Serializ
 
 --- FILE: src/main/java/csd214/bookstore/pojos/Ticket.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 public class Ticket extends Product {
     public String description = "";
@@ -586,7 +586,7 @@ public class Ticket extends Product {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/Publication.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import java.util.Objects;
 
@@ -682,7 +682,7 @@ public abstract class Publication extends Product {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/Book.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import java.util.Objects;
 
@@ -764,7 +764,7 @@ public class Book extends Publication {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/Magazine.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import java.util.Date;
 
@@ -827,7 +827,7 @@ public class Magazine extends Publication {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/DiscMag.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import java.util.Date;
 
@@ -878,7 +878,7 @@ public class DiscMag extends Magazine {
 
 --- FILE: src/main/java/csd214/bookstore/pojos/CashTill.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 public class CashTill {
     private double runningTotal;
@@ -907,7 +907,7 @@ public class CashTill {
 
 --- FILE: src/test/java/csd214/bookstore/pojos/BookTest.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -1030,7 +1030,7 @@ class BookTest {
 
 --- FILE: src/test/java/csd214/bookstore/pojos/MagazineTest.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -1112,7 +1112,7 @@ class MagazineTest {
 
 --- FILE: src/test/java/csd214/bookstore/pojos/DiscMagTest.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -1188,7 +1188,7 @@ class DiscMagTest {
 
 --- FILE: src/test/java/csd214/bookstore/pojos/TicketTest.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -1256,7 +1256,7 @@ class TicketTest {
 
 --- FILE: src/test/java/csd214/bookstore/pojos/CashTillTest.java ---
 ```
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -1386,7 +1386,7 @@ mkdir -p "$TEST_DIR"
 # 1. MagazineTest
 # ---------------------------------------------------------
 cat <<EOF > "$TEST_DIR/MagazineTest.java"
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -1468,7 +1468,7 @@ EOF
 # 2. DiscMagTest
 # ---------------------------------------------------------
 cat <<EOF > "$TEST_DIR/DiscMagTest.java"
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -1544,7 +1544,7 @@ EOF
 # 3. TicketTest
 # ---------------------------------------------------------
 cat <<EOF > "$TEST_DIR/TicketTest.java"
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
@@ -1612,7 +1612,7 @@ EOF
 # 4. CashTillTest
 # ---------------------------------------------------------
 cat <<EOF > "$TEST_DIR/CashTillTest.java"
-package csd214.bookstore.pojos;
+package csd214.old_.pojos;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

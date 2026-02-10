@@ -43,7 +43,7 @@ The hierarchy implements the following structure:
 
 2.  **Run the application:**
     ```bash
-    mvn exec:java -Dexec.mainClass="csd214.bookstore.Main"
+    mvn exec:java -Dexec.mainClass="csd214.old_.Main"
     ```
 
 ## Usage
