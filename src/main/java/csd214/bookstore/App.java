@@ -71,6 +71,8 @@ public class App {
             System.out.println("4. Add Ticket");
             System.out.println("5. Add Pen");
             System.out.println("6. Add Notebook");
+            System.out.println("7. Add Bowling Shoes");
+            System.out.println("8. Add Bowling Ball");
             System.out.println("99. Exit");
 
             try {
@@ -91,6 +93,8 @@ public class App {
                 case 4: item = new Ticket(); break;
                 case 5: item = new Pen(); break;
                 case 6: item = new Notebook(); break;
+                case 7: item = new BowlingShoes(); break;
+                case 8: item = new BowlingBall(); break;
                 default: System.out.println("Invalid selection."); continue;
             }
 
@@ -118,6 +122,8 @@ public class App {
             System.out.println("5. Tickets");
             System.out.println("6. Pens");
             System.out.println("7. Notebooks");
+            System.out.println("8. Bowling Shoes");
+            System.out.println("9. Bowling Ball");
             System.out.println("99. Exit");
 
             try {
@@ -139,6 +145,8 @@ public class App {
                 case 5: filter = Ticket.class; break;
                 case 6: filter = Pen.class; break;
                 case 7: filter = Notebook.class; break;
+                case 8: filter = BowlingShoes.class; break;
+                case 9: filter = BowlingSupply.class; break;
                 default: System.out.println("Invalid selection."); continue;
             }
 

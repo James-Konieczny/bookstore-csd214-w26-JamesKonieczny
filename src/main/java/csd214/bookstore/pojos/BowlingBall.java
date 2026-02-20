@@ -77,7 +77,7 @@ public class BowlingBall extends BowlingSupply {
                 ", color= " + color +
                 ", coverstock= " + coverstock +
                 ", core= " + core +
-                "}" + super.toString();
+                ", " + super.toString() + "}";
     }
 
     @Override

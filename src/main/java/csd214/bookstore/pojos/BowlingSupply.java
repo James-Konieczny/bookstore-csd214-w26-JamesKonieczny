@@ -11,7 +11,7 @@ public abstract class BowlingSupply extends Product {
     public BowlingSupply() {}
 
     public BowlingSupply(String productId, String name, double price, String brand, boolean maintenanceRequired, String skillLevel) {
-        super(productId, name, price);
+        super(productId, "BowlingSupply", price);
         this.brand = brand;
         this.maintenanceRequired = maintenanceRequired;
         this.skillLevel = skillLevel;
@@ -64,7 +64,7 @@ public abstract class BowlingSupply extends Product {
                 "brand= " + brand +
                 ", is maintenance required= " + maintenanceRequired +
                 ", skill level= " + skillLevel +
-                "}" + super.toString();
+                "}, " + super.toString();
     }
 
     @Override

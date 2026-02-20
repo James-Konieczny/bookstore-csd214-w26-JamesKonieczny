@@ -77,7 +77,7 @@ public class BowlingShoes extends BowlingSupply {
                 ", color= " + color +
                 ", sole= " + sole +
                 ", main material= " + mainMaterial +
-                "}" + super.toString();
+                ", " + super.toString() + "}";
     }
 
     @Override
