@@ -68,11 +68,6 @@ public abstract class BowlingSupply extends Product {
     }
 
     @Override
-    public void sellItem() {
-
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (!(o instanceof BowlingSupply that)) return false;
         return maintenanceRequired == that.maintenanceRequired && Objects.equals(brand, that.brand) && Objects.equals(skillLevel, that.skillLevel);
